@@ -27,12 +27,13 @@ export function reducer(state: State, action: Action): State {
         loading: true,
         error: null
       };
+
     case LOADING_SUCCESS_ACTION:
       return {
         ...state,
         items: action.data,
         loading: false
-      };
+  }
     case LOADING_ERROR_ACTION:
       return {
         ...state,

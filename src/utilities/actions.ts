@@ -1,4 +1,5 @@
-import { Items } from "../lib/types";
+import { Action, Item } from "../lib/types";
+
 
 export const LOADING_INIT_ACTION = 'loading-init-action';
 export const LOADING_SUCCESS_ACTION = 'loading-success-action';
@@ -10,49 +11,50 @@ export const ITEM_PURCHASED_ACTION = 'item-purchased-action';
 
 export const SUBMIT_FORM_ACTION = 'submit-form-action';
 
-export function initLoading() {
+export const initLoading = (): Action => {
   return {
     type: LOADING_INIT_ACTION
   };
 }
 
-export function successLoading(items: Items) {
+export const successLoading = (items: Item[]): Action => {
   return {
-    ...items,
+    data: items,
     type: LOADING_SUCCESS_ACTION
   };
 }
 
-export function errorLoading() {
+export const errorLoading = (): Action => {
   return {
-    type: LOADING_ERROR_ACTION
+    type: LOADING_ERROR_ACTION,
+    error: new Error()
   };
 }
 
-export function changeItemText(item: string) {
+export const itemTextChange = (item: string): Action => {
   return {
     item,
     type: ITEM_TEXT_CHANGE_ACTION
   };
 }
 
-export function changeQuantity(quantity: number) {
+export const itemQuantityChange = (quantity: number): Action => {
   return {
     quantity,
     type: ITEM_QUANTITY_CHANGE_ACTION
   };
 }
 
-export function changePurchased(purchased: boolean, id: number) {
+export const itemPurchasedChange = (purchased: boolean, id: number): Action => {
   return {
-    id,
+    id: id,
     purchased,
     type: ITEM_PURCHASED_ACTION
   };
 }
 
-export function submitForm({ item, quantity }:
-  { item: string, quantity: number }) {
+export const submitForm = ({ item, quantity }:
+  { item: string, quantity: number }): Action => {
   return {
     item,
     quantity,
