@@ -1,6 +1,8 @@
 import { Action, Item } from "../lib/types";
 
-
+/**
+ * Action types
+ */
 export const LOADING_INIT_ACTION = 'loading-init-action';
 export const LOADING_SUCCESS_ACTION = 'loading-success-action';
 export const LOADING_ERROR_ACTION = 'loading-error-action';
@@ -10,6 +12,10 @@ export const ITEM_QUANTITY_CHANGE_ACTION = 'item-quantity-change-action';
 export const ITEM_PURCHASED_ACTION = 'item-purchased-action';
 
 export const SUBMIT_FORM_ACTION = 'submit-form-action';
+
+/**
+ * Action creators
+ */
 
 export const initLoading = (): Action => {
   return {
@@ -48,7 +54,7 @@ export const itemQuantityChange = (quantity: number): Action => {
 export const itemPurchasedChange = (purchased: boolean, id: number): Action => {
   return {
     id: id,
-    purchased,
+    purchased: !purchased,
     type: ITEM_PURCHASED_ACTION
   };
 }
@@ -61,4 +67,3 @@ export const submitForm = ({ item, quantity }:
     type: SUBMIT_FORM_ACTION
   };
 }
-
