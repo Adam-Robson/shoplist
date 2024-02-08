@@ -7,7 +7,7 @@ import {
   ITEM_TEXT_CHANGE_ACTION,
   ITEM_QUANTITY_CHANGE_ACTION,
   ITEM_PURCHASED_ACTION,
-  SUBMIT_FORM_ACTION
+  SUBMIT_FORM_ACTION,
 } from './actions'
 
 export const initialState = {
@@ -71,6 +71,8 @@ export function reducer(state: State, action: Action): State {
         item: '',
         quantity: 0
       };
+
+
     default:
       return state;
   }

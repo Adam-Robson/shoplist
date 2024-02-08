@@ -71,7 +71,6 @@ body {
   gap: 1rem;
 }
 
-
 .form-container {
   min-height: 50%;
   height: 25rem;
@@ -94,9 +93,34 @@ body {
 }
 
 label {
+  font-size: 0.6rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.posts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
+  grid-template-areas:
+  ". . . . . .";
+}
+
+.post {
+  grid-area: ".";
+  min-height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem;
+  border-radius: 8px;
+  background-color: var(--primary);
+  box-shadow: 1px 1px 6px 2px var(--accent);
+  transition: all 0.25s;
 }
 
 h1 {
@@ -124,6 +148,8 @@ a:hover {
 
 
 button {
+  max-width: 10rem;
+  min-width: 10rem;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
