@@ -2,6 +2,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import { test, beforeEach, afterEach, expect } from 'vitest'
 import { render, screen, cleanup } from '@testing-library/react'
+import { createClient } from '@supabase/supabase-js'
+
+const url = import.meta.env.VITE_APP_SUPABASE_URL as string
+const key = import.meta.env.VITE_APP_SUPABASE_KEY as string
+
+createClient(url, key)
 
 import App from '../App'
 
