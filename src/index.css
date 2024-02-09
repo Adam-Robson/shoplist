@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --text: #404444ff;
-    --background: #d6e1e5ff;
+    --background: #ffffffff;
     --primary: #878e90ff;
     --secondary: #aeb7baff;
     --accent: #c0cfd3ff;
@@ -12,7 +12,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #d6e1e5ff;
+    --text: #ffffffff;
     --background: #404444ff;
     --primary: #aeb7baff;
     --secondary: #878e90ff;

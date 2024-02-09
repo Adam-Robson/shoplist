@@ -8,8 +8,8 @@ export default function NotFound() {
   }
 
   return (
-    <section className="not-found-section">
-      <h1>This route has not been found.</h1>
+    <section className="not-found-section" data-testid="not-found-section">
+      <h1>404: This route has not been found.</h1>
       <button onClick={handleNavigate}>Go to Home</button>
     </section>
   )

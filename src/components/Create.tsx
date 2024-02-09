@@ -51,31 +51,36 @@ export default function Create() {
     }
   };
   return (
-   <div className="form-container">
-      <form className="form" onSubmit={void handleSubmit}>
+    <section className="create-section" data-testid="create-section">
+      <div className="form-container">
+        <form className="form" onSubmit={void handleSubmit}>
 
-        <label htmlFor="text">
-          Text
-          <input
-            type="text"
-            name="item"
-            value={state.item}
-            onChange={onItemTextChange}
-          />
+          <label htmlFor="text">
+            Text
+            <input
+              type="text"
+              name="item"
+              data-testid="text-input"
+              value={state.item}
+              onChange={onItemTextChange}
+            />
+          </label>
+
+          <label htmlFor="number">
+            Number
+            <input
+              type="number"
+              name="quantity"
+              data-testid="quantity-input"
+              value={state.quantity}
+
+              onChange={onItemQuantityChange}
+            />
         </label>
 
-        <label htmlFor="number">
-          Number
-          <input
-            type="number"
-            name="quantity"
-            value={state.quantity}
-            onChange={onItemQuantityChange}
-          />
-        </label>
-
-        <button type="submit">Create</button>
+        <button type="submit" data-testid="create-button">Create</button>
       </form>
-    </div>
+      </div>
+    </section>
   )
 }
