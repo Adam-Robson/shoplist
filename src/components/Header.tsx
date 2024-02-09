@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className="header" data-testid="header">
       <nav>
         <ul className="header-list">
           <li><Link to="/">Home</Link></li>

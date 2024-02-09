@@ -24,10 +24,10 @@ export default function Posts() {
   }
 
   return (
-    <section className="posts-section">{
+    <section className="posts-section" data-testid="posts-section">{
       state.items.map((item: Item) => {
         return (
-          <div key={item.id} className="post">
+          <div key={item.id} className="post" data-testid="post">
             <p>{item.item}</p>
             <p>{item.quantity}</p>
             <button onClick={handlePurchased}>{purchased ? 'Purchased' : 'Not Purchased'}</button>

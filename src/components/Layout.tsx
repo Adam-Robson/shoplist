@@ -3,9 +3,9 @@ import Header from './Header';
 
 export default function Layout() {
   return (
-    <section className="layout-section">
+    <section className="layout-section" data-testid="layout-section">
       <Header  />
-      <main>
+      <main className="main" data-testid="main">
         <Outlet />
       </main>
     </section>
