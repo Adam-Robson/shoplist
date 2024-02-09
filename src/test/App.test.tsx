@@ -3,7 +3,7 @@
 import { test, beforeEach, afterEach, expect } from 'vitest'
 import { render, screen, cleanup } from '@testing-library/react'
 
-import App from '../src/App'
+import App from '../App'
 
 beforeEach(() => {
   render(<App />)
